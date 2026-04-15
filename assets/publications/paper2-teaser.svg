@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="225" viewBox="0 0 400 225" role="img" aria-label="Paper teaser placeholder">
+  <defs>
+    <linearGradient id="g2" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c9daf5" />
+      <stop offset="100%" stop-color="#e8f5f1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="225" fill="url(#g2)" />
+  <text x="200" y="118" text-anchor="middle" fill="#5c6f64" font-family="system-ui,sans-serif" font-size="15">Replace: paper2-teaser</text>
+</svg>

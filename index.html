@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xiao Cao · Academic Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-blobs" aria-hidden="true">
+      <span class="blob blob-a"></span>
+      <span class="blob blob-b"></span>
+    </div>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <nav class="main-nav" aria-label="Primary navigation">
+          <a class="nav-link is-active" href="#about">About</a>
+          <a class="nav-link" href="#blog">News</a>
+          <a class="nav-link" href="#publications">Publications</a>
+          <a class="nav-link" href="#services">Services</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <section id="about" class="content-section" aria-labelledby="about-heading">
+        <div class="profile-hero">
+          <div class="avatar-wrap">
+            <img
+              class="avatar"
+              src="assets/photos/self-photo.jpg"
+              alt="Portrait"
+              width="160"
+              height="160"
+              onerror="this.style.display='none'; this.nextElementSibling.classList.add('is-visible');"
+            />
+            <div class="avatar-fallback" aria-hidden="true">Y</div>
+          </div>
+          <div class="profile-hero-text">
+            <h1 class="profile-name">Xiao Cao</h1>
+            <p class="profile-title">Ph.D. Student · Diggers Lab</p>
+            <p class="profile-affil"><b>University of Electronic Science and Technology of China</b></p>
+            <p class="profile-email">
+              Email:
+              <a class="text-link" href="mailto:xiaocao@std.uestc.edu.cn">xiaocao@std.uestc.edu.cn</a>
+            </p>
+            <div class="social-row">
+              <a
+                class="social-chip"
+                href="https://scholar.google.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Google Scholar"
+              >
+                <span class="icon icon-scholar" aria-hidden="true"></span>
+                Scholar
+              </a>
+              <a
+                class="social-chip"
+                href="https://orcid.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="ORCID"
+              >
+                <span class="icon icon-orcid" aria-hidden="true"></span>
+                ORCID
+              </a>
+              <a
+                class="social-chip"
+                href="https://github.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="GitHub"
+              >
+                <span class="icon icon-github" aria-hidden="true"></span>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <h2 id="about-heading" class="panel-title">About Me</h2>
+        <p class="lead">
+          I am currently a Ph.D. student at the School of Computer Science and Engineering, University of Electronic Science and Technology of China (UESTC),
+           advised by Prof.<a href="https://wenli-vision.github.io/" target="_blank" rel="noopener noreferrer"> Wen Li</a>. Prior to this, I received my B.Eng. degree from the School of Computing and Artificial Intelligence,
+           Southwest Jiaotong University (SWJTU). During my undergraduate studies, 
+           I was fortunate to work with Prof.<a href="https://www.ece.mcmaster.ca/~xwu/" target="_blank" rel="noopener noreferrer"> Xiaolin Wu</a>, from whom I received valuable research training.
+        </p>
+        <p class="tag-label">Research Interests:</p>
+        <ul class="tag-list">
+          <li>3D Reconstruction</li>
+          <li>3D Generation</li>
+          <li>World Model</li>
+        </ul>
+
+        <div class="about-extra">
+          <div class="about-extra-col about-education">
+            <h3 class="subheading" id="education-heading">Experiences</h3>
+            <ol class="timeline timeline--compact" aria-labelledby="education-heading">
+              <li>
+                <span class="timeline-date">2024 — Present</span>
+                <div class="timeline-body timeline-body--with-logo">
+                  <img
+                    class="timeline-logo"
+                    src="assets/logos/uestc-logo.svg"
+                    alt="University of Electronic Science and Technology of China logo"
+                    width="40"
+                    height="40"
+                    loading="lazy"
+                    onerror="this.style.display='none';"
+                  />
+                  <span>Ph.D. Student, University of Electronic Science and Technology of China</span>
+                </div>
+              </li>
+              <li>
+                <span class="timeline-date">2020 — 2024</span>
+                <div class="timeline-body timeline-body--with-logo">
+                  <img
+                    class="timeline-logo"
+                    src="assets/logos/swjtu-logo.svg"
+                    alt="Southwest Jiaotong University logo"
+                    width="40"
+                    height="40"
+                    loading="lazy"
+                    onerror="this.style.display='none';"
+                  />
+                  <span>B.Eng., Southwest Jiaotong University</span>
+                </div>
+              </li>
+            </ol>
+          </div>
+          <aside class="about-extra-col about-cv-card" id="cv" aria-labelledby="cv-download-heading">
+            <h3 class="subheading" id="cv-download-heading">Curriculum Vitae</h3>
+            <p class="about-cv-lead">Full CV with publications, teaching, and service.</p>
+            <a class="btn-primary" href="#" download>Download CV (PDF)</a>
+          </aside>
+        </div>
+      </section>
+
+      <section id="blog" class="content-section" aria-labelledby="blog-heading">
+        <h2 id="blog-heading" class="panel-title">News</h2>
+        <p class="lead">Recent updates on my research, publications, and academic achievements.</p>
+        <ul class="post-list">
+          <li>
+            <a class="post-link" href="#">
+              <span class="post-date">2026-03-31</span>
+              <span class="post-title">🎉🎉 Our paper has been conditionally accepted to SIGGRAPH 2026!</span>
+            </a>
+          </li>
+          <li>
+            <a class="post-link" href="#">
+              <span class="post-date">2026-02-21</span>
+              <span class="post-title">🎉🎉 Our paper has been accepted to CVPR 2026. Congratulations to my bro Yuze!</span>
+            </a>
+          </li>
+          <li>
+            <a class="post-link" href="#">
+              <span class="post-date">2024-09-01</span>
+              <span class="post-title">🎓 I graduated from Southwest Jiaotong University and started my Ph.D. journey at UESTC.</span>
+            </a>
+          </li>
+          <li>
+            <a class="post-link" href="#">
+              <span class="post-date">2024-05-30</span>
+              <span class="post-title">🏅 I was honored to receive the Outstanding Graduate Award of Sichuan Province.</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section id="publications" class="content-section" aria-labelledby="pub-heading">
+        <h2 id="pub-heading" class="panel-title">Publications</h2>
+        <p class="lead">
+          Selected publications and preprints.
+        </p>
+        <p class="pub-legend"><b>Bold</b>: First author · <sup>*</sup> Corresponding author</p>
+
+        <article class="pub-item">
+          <div class="pub-thumb">
+            <img
+              src="assets/publications/geoquery-siggraph2026.jpg"
+              alt="Teaser figure for Your Paper Title Goes Here"
+              width="400"
+              height="225"
+              loading="lazy"
+            />
+          </div>
+          <div class="pub-body">
+            <h3 class="pub-title">GeoQuery: Geometry-Query Diffusion for Sparse-View Reconstruction</h3>
+            <p class="pub-authors">
+              <span class="pub-author is-me is-first">Xiao Cao</span>, Yuze Li, Youmin Zhang, Jiayu Song, Cheng Yan, Wen Li<sup>*</sup>, Lixin Duan
+            </p>
+            <p class="pub-venue">Conditionally accepted by SIGGRAPH 2026 <span class="pub-venue-type">Conference</span></p>
+            <div class="pub-links">
+              <a href="#" class="text-link">PDF</a>
+              <a href="https://xiaoc7.github.io/GeoQuery/" class="text-link">Code</a>
+              <a href="#" class="text-link">BibTeX</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pub-item">
+          <div class="pub-thumb">
+            <img
+              src="assets/publications/fleximmt-cvpr2026.png"
+              alt="Teaser figure for Another Representative Work"
+              width="400"
+              height="225"
+              loading="lazy"
+            />
+          </div>
+          <div class="pub-body">
+            <h3 class="pub-title">Let Your Image Move with Your Motion! – Implicit Multi-Object Multi-Motion Transfer</h3>
+            <p class="pub-authors">
+              <span class="pub-author is-first">Yuze Li</span>, Dong Gong, <span class="pub-author is-me">Xiao Cao</span>, Junchao Yuan, Dongsheng Li, Lei Zhou, Yun Sing Koh, Cheng Yan<sup>*</sup>, Xinyu Zhang
+            </p>
+            <p class="pub-venue">Accepted by CVPR 2026 <span class="pub-venue-type">Conference</span></p>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/2603.01000" class="text-link">PDF</a>
+              <a href="https://github.com/Ethan-Li123/FlexiMMT" class="text-link">Code</a>
+              <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:cxOFqpVINXcJ:scholar.google.com/&output=citation&scisdr=CjyScXkEEN38ihZmn6A:ADi0EEUAAAAAad9gh6CUluOxr3grfw3sSuIvTsk&scisig=ADi0EEUAAAAAad9gh5SjCBHTFTsMFHXoppyebgg&scisf=4&ct=citation&cd=-1&hl=zh-CN" class="text-link">
+                BibTeX</a>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section id="services" class="content-section" aria-labelledby="services-heading">
+        <h2 id="services-heading" class="panel-title">Services</h2>
+        <p class="lead">Academic service and community involvement.</p>
+        <h3 class="subheading">Reviewer</h3>
+        <ol class="timeline timeline--compact" aria-label="Reviewing timeline">
+          <li>
+            <span class="timeline-date">2024 — Present</span>
+            <span class="timeline-body"><b>ICME</b> Reviewer</span>
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Your Name · Static HTML; deploy on GitHub Pages or any host.</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
