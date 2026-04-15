@@ -363,11 +363,13 @@ body {
 }
 
 .icon-scholar {
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'%3E%3Cpath d='M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-2a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM5.5 4.5l2.2 3.8A8 8 0 0 1 12 6c1.5 0 2.9.4 4.1 1.1L18.5 4.5A11 11 0 0 0 12 3c-2.4 0-4.6.8-6.5 1.5z'/%3E%3C/svg%3E");
+  /* Standard “school/mortarboard” icon */
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm-7 10.18v4L12 21l7-3.82v-4L12 17l-7-3.82z'/%3E%3C/svg%3E");
 }
 
 .icon-orcid {
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='8' r='3' fill='black'/%3E%3Cpath fill='black' d='M8 14h2v6H8zm4 0h4v1.5h-4zm0 3h4v1.5h-4z'/%3E%3C/svg%3E");
+  /* ORCID “iD” mark (monochrome) */
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zM10.5 17.75H8.25V8.5h2.25v9.25zM9.375 7.25c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25 1.25.56 1.25 1.25-.56 1.25-1.25 1.25zM16.5 17.75h-3.25V8.5h3.25c2.07 0 3.75 1.68 3.75 3.75V14c0 2.07-1.68 3.75-3.75 3.75zM18 12.25C18 11.007 16.993 10 15.75 10H15v6h.75c1.243 0 2.25-1.007 2.25-2.25v-1.5z'/%3E%3C/svg%3E");
 }
 
 .icon-github {
