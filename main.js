@@ -1,6 +1,9 @@
 (function () {
-  const navLinks = document.querySelectorAll(".nav-link");
-  const sectionIds = ["about", "blog", "publications", "services"];
+  const navLinks = Array.from(document.querySelectorAll(".nav-link"));
+  const sectionIds = navLinks
+    .map((link) => link.getAttribute("href"))
+    .filter((href) => href && href.startsWith("#"))
+    .map((href) => href.slice(1));
 
   function setActiveNav(id) {
     navLinks.forEach((link) => {
@@ -8,44 +11,50 @@
     });
   }
 
-  function applyHashToNav() {
-    const raw = window.location.hash.replace("#", "");
-    if (!raw) {
-      setActiveNav("about");
-      return;
-    }
-    if (raw === "cv") {
-      setActiveNav("about");
-      return;
-    }
-    if (sectionIds.includes(raw)) {
-      setActiveNav(raw);
-      return;
-    }
-    setActiveNav("about");
-  }
+  function chooseActiveSection() {
+    const offset = window.innerHeight * 0.32;
+    let activeId = sectionIds[0];
 
-  navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      const hash = link.getAttribute("href");
-      if (!hash || !hash.startsWith("#")) return;
-      const id = hash.slice(1);
-      if (id === "cv") {
-        setActiveNav("about");
-        return;
-      }
-      if (sectionIds.includes(id)) {
-        setActiveNav(id);
+    sectionIds.forEach((id) => {
+      const section = document.getElementById(id);
+      if (!section) return;
+      if (section.getBoundingClientRect().top <= offset) {
+        activeId = id;
       }
     });
-  });
 
-  window.addEventListener("hashchange", applyHashToNav);
+    setActiveNav(activeId);
+  }
 
   const yearEl = document.getElementById("year");
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
   }
 
-  applyHashToNav();
+  const themeToggle = document.getElementById("theme-toggle");
+  const savedTheme = window.localStorage.getItem("theme");
+  if (savedTheme) {
+    document.documentElement.dataset.theme = savedTheme;
+  }
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+      document.documentElement.dataset.theme = nextTheme;
+      window.localStorage.setItem("theme", nextTheme);
+    });
+  }
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      const href = link.getAttribute("href");
+      if (href && href.startsWith("#")) {
+        setActiveNav(href.slice(1));
+      }
+    });
+  });
+
+  window.addEventListener("scroll", chooseActiveSection, { passive: true });
+  window.addEventListener("hashchange", chooseActiveSection);
+  chooseActiveSection();
 })();
